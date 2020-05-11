@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block contents %}
+    <h1>{{ post.title }}</h1>
+    <small>By: {{ post.author.last_name }} {{ post.author.first_name }}</small><br/>
+    <hr>
+    <br/>
+    {{ post.text }}
+    <br/>
+    <br/>
+    <a href="{% url 'blog' %}">BACK</a>
+{% endblock contents %}
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'menus/topmn.html' %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}Blog{% endblock title %}
+</head>
+
+<body>
+    {% block content %}
+    <h3>Welcome to Blog</h3> <br/>
+    <h3>블로그에 오신 것을 환영합니다.</h3>
+    <ul>
+    {% for post in object_list %}
+        <li>
+            <a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a> - {{ post.author.last_name }} {{ post.author.first_name }}<br/>
+            {{ post.text }}
+        </li>
+    {% endfor %}
+    </ul>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Title -->
+  <title>{% block title %}HapCheonGongPa{% endblock title %}</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'main/favicon.ico' %}">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css' %}">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="{% static 'assets/css/theme.css' %}">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
+          data-hs-header-options='{
+            "fixMoment": 1000,
+            "fixEffect": "slide"
+          }'>
+    <!-- Search -->
+    <div id="searchPushTop" class="search-push-top">
+      <div class="container position-relative">
+        <div class="search-push-top-content pt-3">
+          <!-- Close Button -->
+          <div class="search-push-top-close-btn">
+            <div class="hs-unfold">
+              <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary mt-2 mr-2" href="javascript:;"
+                 data-hs-unfold-options='{
+                  "target": "#searchPushTop",
+                  "type": "jquery-slide",
+                  "contentSelector": ".search-push-top"
+                 }'>
+                <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- End Close Button -->
+
+          <!-- Input -->
+          <form class="input-group">
+            <input type="search" class="form-control" placeholder="Search Front" aria-label="Search Front">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary">Search</button>
+            </div>
+          </form>
+          <!-- End Input -->
+
+          <!-- Content -->
+          <div class="row d-none d-md-flex mt-7">
+            <div class="col-sm-6">
+              <span class="h5">Quick Links</span>
+
+              <div class="row">
+                <!-- Nav Link -->
+                <div class="col-6">
+                  <div class="nav nav-sm nav-x-0 flex-column">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Search Results List
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Search Results Grid
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      About
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Services
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Invoice
+                    </a>
+                  </div>
+                </div>
+                <!-- End Nav Link -->
+
+                <!-- Nav Link -->
+                <div class="col-6">
+                  <div class="nav nav-sm nav-x-0 flex-column">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Profile
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      User Contacts
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Reviews
+                    </a>
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-angle-right mr-1"></i>
+                      Settings
+                    </a>
+                  </div>
+                </div>
+                <!-- End Nav Link -->
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <!-- Banner -->
+              <div class="rounded search-push-top-banner">
+                <div class="d-flex align-items-center">
+                  <div class="search-push-top-banner-container">
+                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img3.png' %}" alt="Image Description">
+                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img2.png' %}" alt="Image Description">
+                  </div>
+
+                  <div>
+                    <div class="mb-4">
+                      <span class="h5">Featured Item</span>
+                      <p>Create astonishing web sites and pages.</p>
+                    </div>
+                    <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:;">Apply Now <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Banner -->
+            </div>
+          </div>
+          <!-- End Content -->
+        </div>
+      </div>
+    </div>
+    <!-- End Search -->
+
+    <div class="header-section">
+      <!-- Topbar -->
+      <div class="container header-hide-content pt-2">
+        <div class="d-flex align-items-center">
+          <!-- Language -->
+          <div class="hs-unfold">
+            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;"
+               data-hs-unfold-options='{
+                "target": "#languageDropdown",
+                "type": "css-animation",
+                "event": "hover",
+                "hideOnScroll": "true"
+               }'>
+              <img class="dropdown-item-icon mr-2" src="{% static 'assets/vendor/flag-icon-css/flags/4x3/us.svg' %}" alt="SVG">
+              <span class="d-inline-block d-sm-none">US</span>
+              <span class="d-none d-sm-inline-block">United States</span>
+            </a>
+
+            <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
+              <a class="dropdown-item active" href="#">English</a>
+              <a class="dropdown-item" href="#">Deutsch</a>
+              <a class="dropdown-item" href="#">Español‎</a>
+            </div>
+          </div>
+          <!-- End Language -->
+
+          <div class="ml-auto">
+            <!-- Jump To -->
+            <div class="hs-unfold d-sm-none mr-2">
+              <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;"
+                 data-hs-unfold-options='{
+                  "target": "#jumpToDropdown",
+                  "type": "css-animation",
+                  "event": "hover",
+                  "hideOnScroll": "true"
+                 }'>
+                Jump to
+              </a>
+
+              <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
+                <a class="dropdown-item" href="../main/help-desk/faq.html">Help</a>
+                <a class="dropdown-item" href="../main/help-desk/help.html">Contacts</a>
+              </div>
+            </div>
+            <!-- End Jump To -->
+
+            <!-- Links -->
+            <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
+              <a class="nav-link" href="../main/help-desk/faq.html">Help</a>
+              <a class="nav-link" href="../main/help-desk/help.html">Contacts</a>
+            </div>
+            <!-- End Links -->
+          </div>
+
+          <ul class="list-inline ml-2 mb-0">
+            <!-- Search -->
+            <li class="list-inline-item">
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                   data-hs-unfold-options='{
+                    "target": "#searchPushTop",
+                    "type": "jquery-slide",
+                    "contentSelector": ".search-push-top"
+                   }'>
+                  <i class="fas fa-search"></i>
+                </a>
+              </div>
+            </li>
+            <!-- End Search -->
+
+            <!-- Shopping Cart -->
+            <li class="list-inline-item">
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                   data-hs-unfold-options='{
+                    "target": "#shoppingCartDropdown",
+                    "type": "css-animation",
+                    "event": "hover",
+                    "hideOnScroll": "true"
+                   }'>
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+
+                <div id="shoppingCartDropdown" class="hs-unfold-content dropdown-menu dropdown-menu-right text-center p-7" style="min-width: 250px;">
+                  <figure class="max-w-9rem mx-auto mb-3">
+                    <img class="img-fluid" src="{% static 'assets/svg/illustrations/empty-cart.svg' %}" alt="SVG">
+                  </figure>
+                  <span class="d-block">Your Cart is Empty</span>
+                </div>
+              </div>
+            </li>
+            <!-- End Shopping Cart -->
+
+            <!-- Account Login -->
+            <li class="list-inline-item">
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary" href="javascript:;"
+                   data-hs-unfold-options='{
+                    "target": "#sidebarContent",
+                    "type": "css-animation",
+                    "animationIn": "fadeInRight",
+                    "animationOut": "fadeOutRight",
+                    "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                    "smartPositionOff": true
+                   }'>
+                  <i class="fas fa-user-circle"></i>
+                </a>
+              </div>
+            </li>
+            <!-- End Account Login -->
+          </ul>
+        </div>
+      </div>
+      <!-- End Topbar -->
+
+  <!-- ========== HEADER MENU ========== -->
+  <header id="header" class="header">
+    <div class="header-section">
+      <div id="logoAndNav" class="container">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg">
+          <!-- Logo -->
+          <a class="navbar-brand" href="../main/main.html" aria-label="Front">
+            <img src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <span class="navbar-toggler-default">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+              </svg>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+              </svg>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+
+              <!-- Pages Submenu -->
+              <!-- End Pages -->
+
+              <!-- Blog One -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">합천공파 종회</a>
+
+                <!-- Blog - Submenu-->
+                <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item" href="../main/hcgp/greeting.html">회장 인사말</a>
+                  <a class="dropdown-item" href="../main/hcgp/orgchart.html">종회 조직도</a>
+                  <a class="dropdown-item" href="../main/hcgp/execlist.html">종회 임원명단</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../main/hcgp/map.html">찾아오시는 길</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Blog One -->
+
+              <!-- Blog Two -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">자료실</a>
+
+                <!-- Blog - Submenu-->
+                <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item" href="../main/library/history.html">합천공파종회 약사</a>
+                  <a class="dropdown-item" href="../main/library/clans.html">합천공파종회 하계 소파</a>
+                  <a class="dropdown-item" href="../main/library/honact.html">명조와 파조</a>
+                  <a class="dropdown-item" href="../main/library/histsites.html">합천공파 유적지</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../main/library/genealogy.html">족보 보는 법</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Blog Two -->
+
+              <!-- Shop -->
+              <!-- End Shop -->
+              <!-- Demos -->
+              <!-- End Demos -->
+
+              <!-- Home -->
+              <li class="hs-has-mega-menu navbar-nav-item">
+                <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">합천공파 파보</a>
+
+                <!-- Home - Mega Menu -->
+                <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="homeMegaMenu">
+                  <div class="row no-gutters">
+                    <div class="col-lg-6">
+                      <!-- Banner Image -->
+                      <div class="navbar-banner" style="background-image: url(../../assets/img/750x750/img1.jpg);">
+                        <div class="navbar-banner-content">
+                          <div class="mb-4">
+                            <span class="h2 d-block text-white">Branding Works</span>
+                            <p class="text-white">Experience a level of our quality in both design &amp; customization works.</p>
+                          </div>
+                          <a class="btn btn-primary btn-sm transition-3d-hover" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                        </div>
+                      </div>
+                      <!-- End Banner Image -->
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="row mega-menu-body">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                          <span class="d-block h5">Classic</span>
+                          <a class="dropdown-item" href="empty.html">Agency</a>
+                          <a class="dropdown-item" href="empty.html">Analytics <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                          <a class="dropdown-item" href="empty.html">Studio</a>
+                          <a class="dropdown-item" href="empty.html">Marketing</a>
+                          <a class="dropdown-item" href="empty.html" target="_blank">Advertisement <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                          <a class="dropdown-item" href="empty.html">Consulting</a>
+                          <a class="dropdown-item" href="main.html">Portfolio</a>
+                          <a class="dropdown-item" href="empty.html">Software</a>
+                          <a class="dropdown-item" href="empty.html">Business</a>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <span class="d-block h5">App</span>
+                          <div class="mb-3">
+                            <a class="dropdown-item" href="empty.html">UI Kit</a>
+                            <a class="dropdown-item" href="empty.html">SaaS</a>
+                            <a class="dropdown-item" href="empty.html">Workflow</a>
+                            <a class="dropdown-item" href="empty.html">Payment</a>
+                            <a class="dropdown-item" href="empty.html">Tool</a>
+                          </div>
+
+                          <span class="d-block h5">Onepages</span>
+                          <a class="dropdown-item" href="empty.html">Corporate</a>
+                          <a class="dropdown-item" href="empty.html">SaaS <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Home - Mega Menu -->
+              </li>
+              <!-- End Home -->
+
+              <!-- Docs -->
+              <li class="hs-has-mega-menu navbar-nav-item"
+                  data-hs-mega-menu-item-options='{
+                    "desktop": {
+                      "position": "right",
+                      "maxWidth": "260px"
+                    }
+                  }'>
+                <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">수단양식</a>
+
+                <!-- Docs - Submenu -->
+                <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu" style="min-width: 330px;">
+                  <!-- Promo Item One -->
+                  <div class="navbar-promo-item">
+                    <a class="navbar-promo-link" href="../main/empty.html">
+                      <div class="media align-items-center">
+                        <img class="navbar-promo-icon" src="{% static 'assets/svg/icons/icon-2.svg' %}" alt="SVG">
+                        <div class="media-body">
+                          <span class="navbar-promo-title">
+                            수단 작성
+                            <span class="badge badge-primary badge-pill ml-1">v1.1</span>
+                          </span>
+                          <small class="navbar-promo-text">수단 작성을 안내해 드립니다.</small>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- End Promo Item One -->
+
+                  <!-- Promo Item Two -->
+                  <!-- End Promo Item Two -->
+
+                  <!-- Promo Footer -->
+                  <div class="navbar-promo-footer">
+                    <!-- List -->
+                    <div class="row no-gutters">
+                      <div class="col-6">
+                        <div class="navbar-promo-footer-item">
+                          <span class="navbar-promo-footer-text">양식 내려받기</span>
+                          <a class="navbar-promo-footer-text" href="../main/empty.html">
+                            수단양식
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 navbar-promo-footer-ver-divider">
+                        <div class="navbar-promo-footer-item">
+                          <span class="navbar-promo-footer-text">질문이 있으십니까?</span>
+                          <a class="navbar-promo-footer-text" href="http://hcgp91.org/contact-us">  <!-- 합천공파종회 홈페이지 -->
+                            합천공파종회 파보위원회
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End List -->
+                  </div>
+                  <!-- End Promo Footer -->
+                </div>
+                <!-- End Docs - Submenu -->
+              </li>
+              <!-- End Docs -->
+
+              <!-- Button Buy Now-->
+              <!-- End Button Buy Now-->
+
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== SIDE MENU ========== -->
+  <main id="content" role="main">
+    <!-- Title Section -->
+    <div class="bg-light">
+      <div class="container py-5">
+        <div class="row align-items-sm-center">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <h1 class="h4 mb-0">현재페이지 제</h1>
+          </div>
+
+          <div class="col-sm-6">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter justify-content-sm-end mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Categories</li>
+              </ol>
+            </nav>
+            <!-- End Breadcrumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Title Section -->
+
+    <!-- Categories Section -->
+    <div class="container space-top-1 space-top-md-2 space-bottom-2">
+      <div class="row">
+        <div class="col-lg-3 mb-5 mb-lg-0">
+          <!-- Navbar -->
+          <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+            <!-- Responsive Toggle Button -->
+            <button type="button" class="navbar-toggler btn btn-block border py-3"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="sidebarNav"
+                    data-toggle="collapse"
+                    data-target="#sidebarNav">
+              <span class="d-flex justify-content-between align-items-center">
+                <span class="h5 mb-0">View all categories</span>
+                <span class="navbar-toggler-default">
+                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                  </svg>
+                </span>
+                <span class="navbar-toggler-toggled">
+                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                  </svg>
+                </span>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+
+            <div id="sidebarNav" class="collapse navbar-collapse">
+              <!-- Nav Link -->
+              <div class="pl-2 pl-lg-0 mt-3 mt-lg-0">
+                <div class="position-relative">
+                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav1Collapse" data-target="#sidebarNav1Collapse">
+                    합천공파 종회
+                  </a>
+
+                  <div id="sidebarNav1Collapse" class="collapse" data-parent="#sidebarNav">
+                    <div id="sidebarNav1" class="navbar-nav align-items-start flex-column">
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav1One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav1One">
+                          Electronic accessories
+                        </a>
+                        <div id="sidebarNav1One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav1">
+                          <a class="dropdown-item" href="#">Mobile accessories</a>
+                          <a class="dropdown-item" href="#">Portable audio</a>
+                          <a class="dropdown-item" href="#">Wearable</a>
+                          <a class="dropdown-item" href="#">Console accessories</a>
+                          <a class="dropdown-item" href="#">Camera accessories</a>
+                          <a class="dropdown-item" href="#">Computer accessories</a>
+                          <a class="dropdown-item" href="#">Storage</a>
+                          <a class="dropdown-item" href="#">Printers</a>
+                          <a class="dropdown-item" href="#">Computer components</a>
+                        </div>
+                      </div>
+                      <a class="dropdown-item" href="#">Mobiles</a>
+                      <a class="dropdown-item" href="#">Tablets</a>
+                      <a class="dropdown-item" href="#">Laptops</a>
+                      <a class="dropdown-item" href="#">Desktops</a>
+                      <a class="dropdown-item" href="#">Gaming consoles</a>
+                      <a class="dropdown-item" href="#">Car cameras</a>
+                      <a class="dropdown-item" href="#">Security cameras</a>
+                      <a class="dropdown-item" href="#">Digital cameras</a>
+                      <a class="dropdown-item" href="#">Gadgets</a>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="dropdown-item px-0" href="#">
+                  자료실 1
+                </a>
+
+                <div class="position-relative">
+                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2Collapse" data-target="#sidebarNav2Collapse">
+                    자료실 2
+                  </a>
+
+                  <div id="sidebarNav2Collapse" class="collapse" data-parent="#sidebarNav">
+                    <div id="sidebarNav2" class="navbar-nav align-items-start flex-column">
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav2One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2One">
+                          TV &amp; video devices
+                        </a>
+                        <div id="sidebarNav2One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav2">
+                          <a class="dropdown-item" href="#">Accessories</a>
+                        </div>
+                      </div>
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav2Two" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2Two">
+                          Large appliances
+                        </a>
+                        <div id="sidebarNav2Two" class="navbar-nav flex-column collapse" data-parent="#sidebarNav2">
+                          <a class="dropdown-item" href="#">Kitchen</a>
+                          <a class="dropdown-item" href="#">Living room</a>
+                        </div>
+                      </div>
+                      <a class="dropdown-item" href="#">Cooling &amp; air treatment</a>
+                      <a class="dropdown-item" href="#">Vacuums &amp; floor care</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="position-relative">
+                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3Collapse" data-target="#sidebarNav3Collapse">
+                    Health &amp; beauty
+                  </a>
+
+                  <div id="sidebarNav3Collapse" class="collapse" data-parent="#sidebarNav">
+                    <div id="sidebarNav3" class="navbar-nav align-items-start flex-column">
+                      <a class="dropdown-item" href="#">Food supplements</a>
+                      <a class="dropdown-item" href="#">Skincare</a>
+                      <a class="dropdown-item" href="#">Makeup</a>
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav3One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3One">
+                          Beauty tools
+                        </a>
+                        <div id="sidebarNav3One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav3">
+                          <a class="dropdown-item" href="#">Men</a>
+                          <a class="dropdown-item" href="#">Women</a>
+                        </div>
+                      </div>
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav3Two" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3Two">
+                          Medical supplies
+                        </a>
+                        <div id="sidebarNav3Two" class="navbar-nav flex-column collapse" data-parent="#sidebarNav3">
+                          <a class="dropdown-item" href="#">Bath &amp; body</a>
+                          <a class="dropdown-item" href="#">Hair care</a>
+                          <a class="dropdown-item" href="#">Personal care</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="dropdown-item px-0" href="#">
+                  Accessories
+                </a>
+
+                <a class="dropdown-item px-0" href="#">
+                  Furniture
+                </a>
+
+                <a class="dropdown-item px-0" href="#">
+                  Casual
+                </a>
+
+                <div class="position-relative">
+                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav4Collapse" data-target="#sidebarNav4Collapse">
+                    Babies &amp; toys
+                  </a>
+
+                  <div id="sidebarNav4Collapse" class="collapse" data-parent="#sidebarNav">
+                    <div id="sidebarNav4" class="navbar-nav align-items-start flex-column">
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav4One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav4One">
+                          Foods
+                        </a>
+                        <div id="sidebarNav4One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav4">
+                          <a class="dropdown-item" href="#">Feeding</a>
+                          <a class="dropdown-item" href="#">Milk formula</a>
+                        </div>
+                      </div>
+                      <a class="dropdown-item" href="#">Diapering &amp; potty</a>
+                      <a class="dropdown-item" href="#">Nursery</a>
+                      <a class="dropdown-item" href="#">Baby personal care</a>
+                      <a class="dropdown-item" href="#">Clothing &amp; accessories</a>
+                      <a class="dropdown-item" href="#">Baby and &amp; toys</a>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="dropdown-item px-0" href="#">
+                  Sports &amp; travel
+                </a>
+
+                <a class="dropdown-item px-0" href="#">
+                  Fashion
+                </a>
+
+                <a class="dropdown-item px-0" href="#">
+                  Glasses
+                </a>
+
+                <div class="position-relative">
+                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav5Collapse" data-target="#sidebarNav5Collapse">
+                    Automotive &amp; motorcycles
+                  </a>
+
+                  <div id="sidebarNav5Collapse" class="collapse" data-parent="#sidebarNav">
+                    <div id="sidebarNav5" class="navbar-nav align-items-start flex-column">
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav5One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav5One">
+                          Automotive
+                        </a>
+                        <div id="sidebarNav5One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav5">
+                          <a class="dropdown-item" href="#">Services &amp; installations</a>
+                          <a class="dropdown-item" href="#">Auto oils &amp; fluids</a>
+                        </div>
+                      </div>
+                      <a class="dropdown-item" href="#">Interior accessories</a>
+                      <a class="dropdown-item" href="#">Exterior accessories</a>
+                      <a class="dropdown-item" href="#">Car audio</a>
+                      <a class="dropdown-item" href="#">Auto care</a>
+                      <a class="dropdown-item" href="#">Riding gear</a>
+                      <div class="position-relative">
+                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav6One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav6One">
+                          Automotive
+                        </a>
+                        <div id="sidebarNav6One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav5">
+                          <a class="dropdown-item" href="#">Services &amp; installations</a>
+                          <a class="dropdown-item" href="#">Auto oils &amp; fluids</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Nav Link -->
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+        <!-- ======== END SIDE MENU ======= -->
+
+        <!-- MAIN CONTENTS -->
+        <div class="col-lg-9">
+          <!-- CTA -->
+          <div class="bg-img-hero rounded p-6 mb-5" style="background-image: url(../../assets/img/1920x800/img7.jpg);">
+            <div class="row align-items-md-center">
+              <div class="col-md-8 mb-3 mb-md-0">
+                <h1 class="h4 mb-0">Save up to 30% with orders above $50</h1>
+              </div>
+              <div class="col-md-4 text-md-right">
+                <a class="btn btn-primary btn-pill transition-3d-hover px-5" href="#">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- End CTA -->
+
+{% block content %}
+
+
+
+{% endblock content %}
+          <!--
+          <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-5">
+              -- Card --
+              <div class="card border shadow-none d-block">
+                <div class="card-body d-flex align-items-center p-0">
+                  <div class="w-65 border-right">
+                    <img class="img-fluid" src="% static 'assets/img/380x400/img3.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="w-35">
+                    <div class="border-bottom">
+                      <img class="img-fluid" src="% static 'assets/img/380x360/img8.jpg' %}" alt="Image Description">
+                    </div>
+                    <img class="img-fluid" src="% static 'assets/img/380x360/img7.jpg' %}" alt="Image Description">
+                  </div>
+                </div>
+                <div class="card-footer text-center py-4">
+                  <h2 class="h3 mb-1">T-shirts</h2>
+                  <span class="d-block text-muted font-size-1 mb-3">Starting from $29.99</span>
+                  <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="#">View All T-shirts</a>
+                </div>
+              </div>
+              -- End Card --
+            </div>
+
+            <div class="col-sm-6 mb-3 mb-sm-5">
+              -- Card --
+              <div class="card border shadow-none d-block">
+                <div class="card-body d-flex align-items-center p-0">
+                  <div class="w-65 border-right">
+                    <img class="img-fluid" src="% static 'assets/img/380x400/img4.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="w-35">
+                    <div class="border-bottom">
+                      <img class="img-fluid" src="% static 'assets/img/380x360/img6.jpg' %}" alt="Image Description">
+                    </div>
+                    <img class="img-fluid" src="% static 'assets/img/380x360/img5.jpg' %}" alt="Image Description">
+                  </div>
+                </div>
+                <div class="card-footer text-center py-4">
+                  <h3 class="mb-1">Tech covers</h3>
+                  <span class="d-block text-muted font-size-1 mb-3">Starting from $399.99</span>
+                  <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="#">View All Tech covers</a>
+                </div>
+              </div>
+              -- End Card --
+            </div>
+
+            <div class="col-md-4 mb-3 mb-sm-5">
+              -- Card --
+              <div class="card border shadow-none d-block">
+                <img class="card-img-top" src="% static 'assets/img/320x320/img7.jpg' %}" alt="Image Description">
+                <div class="card-footer text-center py-4">
+                  <h3 class="mb-1">Sale</h3>
+                  <span class="d-block text-muted font-size-1 mb-3">30% off orders $50+</span>
+                  <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="#">View All</a>
+                </div>
+              </div>
+              -- End Card --
+            </div>
+
+            <div class="col-md-4 mb-3 mb-sm-5">
+              -- Card --
+              <div class="card border shadow-none d-block">
+                <img class="card-img-top" src="% static 'assets/img/320x320/img6.jpg' %}" alt="Image Description">
+                <div class="card-footer text-center py-4">
+                  <h3 class="mb-1">New releases</h3>
+                  <span class="d-block text-muted font-size-1 mb-3">Be well suited</span>
+                  <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="#">View All</a>
+                </div>
+              </div>
+              -- End Card --
+            </div>
+
+            <div class="col-md-4 mb-3 mb-sm-5">
+              -- Card --
+              <div class="card border shadow-none d-block">
+                <img class="card-img-top" src="% static 'assets/img/320x320/img4.jpg' %}" alt="Image Description">
+                <div class="card-footer text-center py-4">
+                  <h3 class="mb-1">Best sellers</h3>
+                  <span class="d-block text-muted font-size-1 mb-3">Pole and interesting</span>
+                  <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="#">View All</a>
+                </div>
+              </div>
+              -- End Card --
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    --> <!-- END OF SAMPLE FRAMES -->
+    <!-- End Categories Section -->
+
+    <!-- Hero Section -->
+    <!-- End Hero Section -->
+  </main>
+  <!-- ========== END SIDE MENU ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy">
+    <div class="container">
+      <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
+        <div class="row justify-content-lg-between">
+          <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
+            <!-- Logo -->
+            <div class="mb-4">
+              <a href="../main/main.html" aria-label="Front">
+                <img class="brand" src="{% static 'assets/svg/logos/logo-white.svg' %}" alt="Logo">
+              </a>
+            </div>
+            <!-- End Logo -->
+
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+              <li class="nav-item">
+                <a class="nav-link media" href="javascript:;">
+                  <span class="media">
+                    <span class="fas fa-location-arrow mt-1 mr-2"></span>
+                    <span class="media-body">
+                      153 Williamson Plaza, Maggieberg
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link media" href="tel:1-062-109-9222">
+                  <span class="media">
+                    <span class="fas fa-phone-alt mt-1 mr-2"></span>
+                    <span class="media-body">
+                      +1 (062) 109-9222
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+
+          <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+            <h5 class="text-white">Company</h5>
+
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Careers <span class="badge badge-primary ml-1">We're hiring</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Hire us</a></li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+
+          <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+            <h5 class="text-white">Features</h5>
+
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+              <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Release notes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+
+          <div class="col-6 col-md-3 col-lg">
+            <h5 class="text-white">Documentation</h5>
+
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+              <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Status</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+
+          <div class="col-6 col-md-3 col-lg">
+            <h5 class="text-white">Resources</h5>
+
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="media align-items-center">
+                    <i class="fa fa-info-circle mr-2"></i>
+                    <span class="media-body">Help</span>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="media align-items-center">
+                    <i class="fa fa-user-circle mr-2"></i>
+                    <span class="media-body">Your Account</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+        </div>
+      </div>
+
+      <hr class="opacity-xs my-0">
+
+      <div class="space-1">
+        <div class="row align-items-md-center mb-7">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <!-- Nav Link -->
+            <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Privacy &amp; Policy</a>
+              </li>
+              <li class="nav-item opacity mx-3">&#47;</li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Terms</a>
+              </li>
+              <li class="nav-item opacity mx-3">&#47;</li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Site Map</a>
+              </li>
+            </ul>
+            <!-- End Nav Link -->
+          </div>
+
+          <div class="col-md-6 text-md-right">
+            <ul class="list-inline mb-0">
+              <!-- Social Networks -->
+              <li class="list-inline-item">
+                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                  <i class="fab fa-google"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <!-- End Social Networks -->
+
+              <!-- Language -->
+              <li class="list-inline-item">
+                <div class="hs-unfold">
+                  <a class="js-hs-unfold-invoker dropdown-toggle btn btn-xs btn-soft-light" href="javascript:;"
+                     data-hs-unfold-options='{
+                      "target": "#footerLanguage",
+                      "type": "css-animation",
+                      "animationIn": "slideInDown"
+                     }'>
+                    <img class="dropdown-item-icon" src="../../assets/vendor/flag-icon-css/flags/4x3/us.svg" alt="United States Flag">
+                    <span>United States</span>
+                  </a>
+
+                  <div id="footerLanguage" class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
+                    <a class="dropdown-item active" href="#">English</a>
+                    <a class="dropdown-item" href="#">Deutsch</a>
+                    <a class="dropdown-item" href="#">Español</a>
+                    <a class="dropdown-item" href="#">Français</a>
+                    <a class="dropdown-item" href="#">Italiano</a>
+                    <a class="dropdown-item" href="#">日本語</a>
+                    <a class="dropdown-item" href="#">한국어</a>
+                    <a class="dropdown-item" href="#">Nederlands</a>
+                    <a class="dropdown-item" href="#">Português</a>
+                    <a class="dropdown-item" href="#">Русский</a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Language -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="w-md-75 text-lg-center mx-lg-auto">
+          <p class="text-white opacity-sm small">&copy; Front. 2020 Htmlstream. All rights reserved.</p>
+          <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools, we or our authorised service providers may use cookies for storing information to help provide you with a better, faster and safer experience and for marketing purposes.</p>
+        </div>
+        <!-- End Copyright -->
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Account Sidebar Navigation -->
+  <aside id="sidebarContent" class="hs-unfold-content sidebar">
+    <div class="sidebar-scroller">
+      <div class="sidebar-container">
+        <div class="sidebar-footer-offset" style="padding-bottom: 7rem;">
+          <!-- Toggle Button -->
+          <div class="d-flex justify-content-end align-items-center pt-4 px-4">
+            <div class="hs-unfold">
+              <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary" href="javascript:;"
+                 data-hs-unfold-options='{
+                  "target": "#sidebarContent",
+                  "type": "css-animation",
+                  "animationIn": "fadeInRight",
+                  "animationOut": "fadeOutRight",
+                  "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                  "smartPositionOff": true
+                 }'>
+                <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                </svg>
+               </a>
+            </div>
+          </div>
+          <!-- End Toggle Button -->
+
+          <!-- Content -->
+          <div class="scrollbar sidebar-body">
+            <div class="sidebar-content py-4 px-7">
+              <form class="js-validate">
+                <!-- Login -->
+                <div id="login">
+                  <!-- Title -->
+                  <div class="text-center mb-7">
+                    <h3 class="mb-0">Sign In to Front</h3>
+                    <p>Login to manage your account.</p>
+                  </div>
+                  <!-- End Title -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message mb-4">
+                    <label class="input-label">Email</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="email" class="form-control" name="email" id="signinEmail" placeholder="Email" aria-label="Email" required
+                             data-msg="Please enter a valid email address.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message mb-3">
+                    <label class="input-label">Password</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="password" class="form-control" name="password" id="signinPassword" placeholder="Password" aria-label="Password" required
+                             data-msg="Your password is invalid. Please try again.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <div class="d-flex justify-content-end mb-4">
+                    <a class="js-animation-link small link-underline" href="javascript:;"
+                       data-hs-show-animation-options='{
+                         "targetSelector": "#forgotPassword",
+                         "groupName": "idForm",
+                         "animationType": "css-animation",
+                         "animationIn": "slideInUp",
+                         "duration": 400
+                       }'>Forgot Password?</a>
+                  </div>
+
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-sm btn-primary btn-block">Sign In</button>
+                  </div>
+
+                  <div class="text-center mb-3">
+                    <span class="divider divider-xs divider-text">OR</span>
+                  </div>
+
+                  <a class="btn btn-sm btn-ghost-secondary btn-block mb-2" href="#">
+                    <span class="d-flex justify-content-center align-items-center">
+                      <img class="mr-2" src="{% static 'assets/img/160x160/img17.png' %}" alt="Image Description" width="14" height="14">
+                      Sign In with Google
+                    </span>
+                  </a>
+
+                  <div class="text-center">
+                    <span class="small text-muted">Do not have an account?</span>
+                    <a class="js-animation-link small font-weight-bold" href="javascript:;"
+                       data-hs-show-animation-options='{
+                         "targetSelector": "#signup",
+                         "groupName": "idForm",
+                         "animationType": "css-animation",
+                         "animationIn": "slideInUp",
+                         "duration": 400
+                       }'>Sign Up
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Signup -->
+                <div id="signup" style="display: none; opacity: 0;">
+                  <!-- Title -->
+                  <div class="text-center mb-7">
+                    <h3 class="mb-0">Create your account</h3>
+                    <p>Fill out the form to get started.</p>
+                  </div>
+                  <!-- End Title -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message mb-4">
+                    <label class="input-label">Email</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="email" class="form-control" name="email" id="signupEmail" placeholder="Email" aria-label="Email" required
+                             data-msg="Please enter a valid email address.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message mb-4">
+                    <label class="input-label">Password</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="password" class="form-control" name="password" id="signupPassword" placeholder="Password" aria-label="Password" required
+                             data-msg="Your password is invalid. Please try again.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message mb-4">
+                    <label class="input-label">Confirm Password</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="password" class="form-control" name="confirmPassword" id="signupConfirmPassword" placeholder="Confirm Password" aria-label="Confirm Password" required
+                             data-msg="Password does not match the confirm password.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-sm btn-primary btn-block">Sign Up</button>
+                  </div>
+
+                  <div class="text-center mb-3">
+                    <span class="divider divider-xs divider-text">OR</span>
+                  </div>
+
+                  <a class="btn btn-sm btn-ghost-secondary btn-block mb-2" href="#">
+                    <span class="d-flex justify-content-center align-items-center">
+                      <img class="mr-2" src="{% static 'assets/img/160x160/img17.png' %}" alt="Image Description" width="14" height="14">
+                      Sign Up with Google
+                    </span>
+                  </a>
+
+                  <div class="text-center">
+                    <span class="small text-muted">Already have an account?</span>
+                    <a class="js-animation-link small font-weight-bold" href="javascript:;"
+                       data-hs-show-animation-options='{
+                         "targetSelector": "#login",
+                         "groupName": "idForm",
+                         "animationType": "css-animation",
+                         "animationIn": "slideInUp",
+                         "duration": 400
+                       }'>Sign In
+                    </a>
+                  </div>
+                </div>
+                <!-- End Signup -->
+
+                <!-- Forgot Password -->
+                <div id="forgotPassword" style="display: none; opacity: 0;">
+                  <!-- Title -->
+                  <div class="text-center mb-7">
+                    <h3 class="mb-0">Recover password</h3>
+                    <p>Instructions will be sent to you.</p>
+                  </div>
+                  <!-- End Title -->
+
+                  <!-- Input Group -->
+                  <div class="js-form-message">
+                    <label class="sr-only" for="recoverEmail">Your email</label>
+                    <div class="input-group input-group-sm mb-2">
+                      <input type="email" class="form-control" name="email" id="recoverEmail" placeholder="Your email" aria-label="Your email" required
+                             data-msg="Please enter a valid email address.">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-sm btn-primary btn-block">Recover Password</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Remember your password?</span>
+                    <a class="js-animation-link small font-weight-bold" href="javascript:;"
+                       data-hs-show-animation-options='{
+                         "targetSelector": "#login",
+                         "groupName": "idForm",
+                         "animationType": "css-animation",
+                         "animationIn": "slideInUp",
+                         "duration": 400
+                       }'>Login
+                    </a>
+                  </div>
+                </div>
+                <!-- End Forgot Password -->
+              </form>
+            </div>
+          </div>
+          <!-- End Content -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="sidebar-footer border-top py-2 px-7">
+          <ul class="nav nav-sm">
+            <li class="nav-item">
+              <a class="nav-link pl-0" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-info-circle la-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+  </aside>
+  <!-- End Account Sidebar Navigation -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- Go to Top -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": 15
+         },
+         "show": {
+           "bottom": 15
+         },
+         "hide": {
+           "bottom": -15
+         }
+       }
+     }'>
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{% static 'assets/vendor/hs-header/dist/hs-header.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-unfold/dist/hs-unfold.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-show-animation/dist/hs-show-animation.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-validation/dist/jquery.validate.min.js' %}"></script>
+
+  <!-- JS Front -->
+  <script src="{% static 'assets/js/hs.core.js' %}"></script>
+  <script src="{% static 'assets/js/hs.validation.js' %}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      var header = new HSHeader($('#header')).init();
+
+      // initialization of mega menu
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
+        }
+      }).init();
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+      // initialization of form validation
+      $('.js-validate').each(function() {
+        $.HSCore.components.HSValidation.init($(this), {
+          rules: {
+            confirmPassword: {
+              equalTo: '#signupPassword'
+            }
+          }
+        });
+      });
+
+      // initialization of show animations
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+      // initialization of go to
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{% static 'assets/vendor/polifills.js' %}"><\/script>');
+  </script>
+</body>
+</html>

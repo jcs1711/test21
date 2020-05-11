@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'menus/topmn.html' %}
+{% load static %}
+
+<body>
+
+{% block content %}
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="position-relative">
+      <div class="bg-img-hero" style="background-image: url(../../assets/svg/components/abstract-shapes-12.svg);">
+        <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
+          <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
+            <h1>질문이 있으신가요?</h1>
+            <p>양천허씨 합천공파 파보 등재와 관련하여 궁금한 내용에 대해 도움을 받으십시요. </p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
+              <!-- Card -->
+              <a class="card text-center h-100 transition-3d-hover" href="#">
+                <div class="card-body p-lg-5">
+                  <figure class="max-w-8rem w-100 mx-auto mb-4">
+                    <img class="img-fluid" src="../../assets/svg/icons/icon-7.svg" alt="SVG">
+                  </figure>
+                  <h3 class="h4">Knowledgebase</h3>
+                  <p class="text-body mb-0">We're here to help with any questions or code.</p>
+                </div>
+                <div class="card-footer font-weight-bold py-3 px-lg-5">
+                  Contact support <i class="fas fa-angle-right fa-sm ml-1"></i>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
+              <!-- Card -->
+              <a class="card text-center h-100 transition-3d-hover" href="#">  <!-- link to FAQ html -->
+                <div class="card-body p-lg-5">
+                  <figure class="max-w-8rem w-100 mx-auto mb-4">
+                    <img class="img-fluid" src="{% static 'assets/svg/icons/icon-4.svg' %}" alt="SVG">
+                  </figure>
+                  <h3 class="h4">FAQ</h3>
+                  <p class="text-body mb-0">아래의 '질문서'를 작성하시기 전에 자주하는 질문에 대한 답변을 먼저 살펴보세요.</p>
+                </div>
+                <div class="card-footer font-weight-bold py-3 px-lg-5">
+                  자주하는 질문 <i class="fas fa-angle-right fa-sm ml-1"></i>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+
+            <div class="col-md-4 mb-md-n11">
+              <!-- Card -->
+              <a class="card text-center h-100 transition-3d-hover" href="#">
+                <div class="card-body p-lg-5">
+                  <figure class="max-w-8rem w-100 mx-auto mb-4">
+                    <img class="img-fluid" src="../../assets/svg/icons/icon-44.svg" alt="SVG">
+                  </figure>
+                  <h3 class="h4">Developer APIs</h3>
+                  <p class="text-body mb-0">Check out our development quickstart guide.</p>
+                </div>
+                <div class="card-footer font-weight-bold py-3 px-lg-5">
+                  Contact sales <i class="fas fa-angle-right fa-sm ml-1"></i>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG Shape -->
+      <figure class="position-absolute bottom-0 right-0 left-0">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1921 273">
+          <polygon fill="#fff" points="0,273 1921,273 1921,0 "/>
+        </svg>
+      </figure>
+      <!-- End SVG Shape -->
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Contact Form Section -->
+    <div class="container space-2 space-lg-3">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+        <h2>궁금한 사항</h2>
+        <p>궁금한 사항을 적어 이메일로 보내 주세요.</p>
+      </div>
+      <!-- End Title -->
+
+      <div class="w-lg-80 mx-auto">
+        <!-- Contacts Form -->
+        <form class="js-validate">
+          <div class="row">
+            <!-- Input -->
+            <div class="col-sm-6 mb-4">
+              <div class="js-form-message">
+                <label class="input-label">작성자 이름</label>
+                <input type="text" class="form-control" name="name" placeholder="예: 허길동" aria-label="Jeff Fisher" required
+                       data-msg="Please enter your name.">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-4">
+              <div class="js-form-message">
+                <label class="input-label">작성자 이메일 주소</label>
+                <input type="email" class="form-control" name="email" placeholder="gildong@email.com" aria-label="jackwayley@gmail.com" required
+                       data-msg="Please enter a valid email address.">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <div class="w-100"></div>
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-4">
+              <div class="js-form-message">
+                <label class="input-label">제 목</label>
+                <input type="text" class="form-control" name="subject" placeholder="합천공파 종회를 방문할 수 있나요?" aria-label="Web design" required
+                       data-msg="Please enter a subject.">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-4">
+              <div class="js-form-message">
+                <label class="input-label">작성자 연락처</label>
+                <input type="number" class="form-control" name="phone" placeholder="010-355-7656" aria-label="1-800-643-4500" required
+                       data-msg="Please enter a valid phone number.">
+              </div>
+            </div>
+            <!-- End Input -->
+          </div>
+
+          <!-- Input -->
+          <div class="js-form-message mb-6">
+            <label class="input-label">궁금한 내용</label>
+            <div class="input-group">
+              <textarea class="form-control" rows="4" name="text" placeholder="안녕하세요? 합천공파종회 사무실에는 상주 직원이 있습니까?" aria-label="Hi there, I would like to ..." required
+                        data-msg="Please enter a reason."></textarea>
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">제출하기</button>
+            <p class="small">질문을 받은 후, 답변까지 통상 2-3일 걸립니다.(공휴일 제외)</p>
+          </div>
+        </form>
+        <!-- End Contacts Form -->
+      </div>
+    </div>
+    <!-- End Contact Form Section -->
+
+    <!-- Leaflet -->
+    <div class="container-fluid mb-3">
+      <div id="map" class="min-h-450rem rounded"
+           data-hs-leaflet-options='{
+             "map": {
+               "scrollWheelZoom": false,
+               "coords": [37.4040344, -122.0289704]
+             },
+             "marker": [
+               {
+                 "coords": [37.4040344, -122.0289704],
+                 "icon": {
+                   "iconUrl": "../../assets/svg/components/map-pin.svg",
+                   "iconSize": [50, 45]
+                 },
+                 "popup": {
+                   "text": "Test text!"
+                 }
+               }
+             ]
+            }'></div>
+    </div>
+    <!-- End Leaflet -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+{% endblock content %}
+
+  {% block js %}
+  <!-- JS Implementing Plugins -->
+  <script src="{% static 'assets/vendor/hs-header/dist/hs-header.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-unfold/dist/hs-unfold.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hs-show-animation/dist/hs-show-animation.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-validation/dist/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/leaflet/dist/leaflet.js' %}"></script>
+
+  <!-- JS Front -->
+  <script src="{% static 'assets/js/hs.core.js' %}"></script>
+  <script src="{% static 'assets/js/hs.validation.js' %}"></script>
+  <script src="{% static 'assets/js/hs.leaflet.js' %}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      var header = new HSHeader($('#header')).init();
+
+      // initialization of mega menu
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
+        }
+      }).init();
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+      // initialization of show animations
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+      // initialization of form validation
+      $('.js-validate').each(function() {
+        $.HSCore.components.HSValidation.init($(this), {
+          rules: {
+            confirmPassword: {
+              equalTo: '#signupPassword'
+            }
+          }
+        });
+      });
+
+      // initialization of leaflet
+      $('#map').each(function () {
+        var leaflet = $.HSCore.components.HSLeaflet.init($(this)[0]);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+          id: 'mapbox/light-v9'
+        }).addTo(leaflet);
+      });
+
+      // initialization of go to
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{% static 'assets/vendor/polifills.js' %}"><\/script>');
+  </script>
+  {% endblock js %}
+
+</body>
+</html>
