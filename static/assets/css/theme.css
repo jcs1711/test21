@@ -467,6 +467,12 @@ h6, .h6 {
   }
 }
 
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -8880,6 +8886,11 @@ button.bg-navy:focus {
   padding-top: 2rem !important;
 }
 
+.pt-5-1,
+.py-5-1 {
+  padding-top: 1.5rem !important;
+}
+
 .pr-5,
 .px-5 {
   padding-right: 2rem !important;
@@ -8888,6 +8899,11 @@ button.bg-navy:focus {
 .pb-5,
 .py-5 {
   padding-bottom: 2rem !important;
+}
+
+.pb-5-1,
+.py-5-1 {
+  padding-bottom: 1.5rem !important;
 }
 
 .pl-5,

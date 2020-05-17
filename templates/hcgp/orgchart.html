@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'menus/sidemn1.html' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}Organization{% endblock title %}
+</head>
+
+<body>
+  {% block breadcrumb %}
+  <!-- ========== MAIN ========== -->
+    <!-- Title Section -->
+    <div class="bg-light">
+      <div class="container py-5">
+        <div class="row align-items-sm-center">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <h1 class="h4 mb-0">종회 조직도</h1>
+          </div>
+
+          <div class="col-sm-6">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter justify-content-sm-end mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'main' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Organization</li>
+              </ol>
+            </nav>
+            <!-- End Breadcrumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Title Section -->
+  {% endblock breadcrumb %}
+
+  {% block content %}
+    <!-- Categories Section -->
+    <div class="container space-top-1 space-top-md-2 space-bottom-2">
+      <div class="row">
+        <div class="col-lg-3 mb-5 mb-lg-0">
+          <!-- Navbar -->
+          <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+            <!-- Responsive Toggle Button -->
+            <button type="button" class="navbar-toggler btn btn-block border py-3"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="sidebarNav"
+                    data-toggle="collapse"
+                    data-target="#sidebarNav">
+              <span class="d-flex justify-content-between align-items-center">
+                <span class="h5 mb-0">View all categories</span>
+                <span class="navbar-toggler-default">
+                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                  </svg>
+                </span>
+                <span class="navbar-toggler-toggled">
+                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                  </svg>
+                </span>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+
+            <div id="sidebarNav" class="collapse navbar-collapse">
+              <!-- Nav Link -->
+              <div class="pl-2 pl-lg-0 mt-3 mt-lg-0">
+                <a class="dropdown-item px-0" href="#">회장 인사말</a>
+                <a class="dropdown-item px-0" href="#">종회 조직도</a>
+                <a class="dropdown-item px-0" href="#">종회 임원명단</a>
+                <a class="dropdown-item px-0" href="#">종회 회원명단</a>
+                <a class="dropdown-item px-0" href="#">찾아오시는 길</a>
+              </div> <!-- End Nav Link -->
+            </div> <!-- id="sidebarNav" -->
+          </div>
+          <!-- End Navbar -->
+        </div>
+
+        <!-- Main Section -->
+        <div class="col-lg-9">
+          <!-- CTA -->
+          <div class="bg-img-hero rounded p-6 mb-5" style="background-image: url({% static 'assets/img/1920x800/img7.jpg' %});">
+            <div class="row align-items-md-center">
+              <div class="col-md-8 mb-3 mb-md-0">
+                <h1 class="h4 mb-0">Save up to 30% with orders above $50</h1>
+              </div>
+              <div class="col-md-4 text-md-right">
+                <a class="btn btn-primary btn-pill transition-3d-hover px-5" href="#">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- End CTA -->
+         </div>
+
+      </div>
+    </div>
+  <!-- ======== END SIDE MENU ======= -->
+
+
+  {% endblock content %}
+
+
+</body>
+</html>

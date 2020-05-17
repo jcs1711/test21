@@ -3,7 +3,7 @@
 {% load static %}
 <head>
   <!-- Title -->
-  <title>{% block title %}HapCheonGongPa{% endblock title %}</title>
+  <title>{% block title %}{% endblock title %}</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -53,17 +53,17 @@
 
           <!-- Input -->
           <form class="input-group">
-            <input type="search" class="form-control" placeholder="Search Front" aria-label="Search Front">
+            <input type="search" class="form-control" placeholder="내 이름으로 찾아보기   '예: 허길동'" aria-label="Search Front">
             <div class="input-group-append">
-              <button type="button" class="btn btn-primary">Search</button>
+              <button type="button" class="btn btn-primary">찾아보기</button>
             </div>
           </form>
           <!-- End Input -->
 
           <!-- Content -->
           <div class="row d-none d-md-flex mt-7">
-            <div class="col-sm-6">
-              <span class="h5">Quick Links</span>
+            <div class="col-sm-12">
+              <span class="h5">양천허씨 합천공파 파보 등재여부</span>
 
               <div class="row">
                 <!-- Nav Link -->
@@ -71,23 +71,7 @@
                   <div class="nav nav-sm nav-x-0 flex-column">
                     <a class="nav-link" href="#">
                       <i class="fas fa-angle-right mr-1"></i>
-                      Search Results List
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results Grid
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      About
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Services
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Invoice
+                      등재 리스트
                     </a>
                   </div>
                 </div>
@@ -100,43 +84,10 @@
                       <i class="fas fa-angle-right mr-1"></i>
                       Profile
                     </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      User Contacts
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Reviews
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Settings
-                    </a>
                   </div>
                 </div>
                 <!-- End Nav Link -->
               </div>
-            </div>
-
-            <div class="col-sm-6">
-              <!-- Banner -->
-              <div class="rounded search-push-top-banner">
-                <div class="d-flex align-items-center">
-                  <div class="search-push-top-banner-container">
-                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img3.png' %}" alt="Image Description">
-                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img2.png' %}" alt="Image Description">
-                  </div>
-
-                  <div>
-                    <div class="mb-4">
-                      <span class="h5">Featured Item</span>
-                      <p>Create astonishing web sites and pages.</p>
-                    </div>
-                    <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:;">Apply Now <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Banner -->
             </div>
           </div>
           <!-- End Content -->
@@ -158,9 +109,9 @@
                 "event": "hover",
                 "hideOnScroll": "true"
                }'>
-              <img class="dropdown-item-icon mr-2" src="{% static 'assets/vendor/flag-icon-css/flags/4x3/us.svg' %}" alt="SVG">
-              <span class="d-inline-block d-sm-none">US</span>
-              <span class="d-none d-sm-inline-block">United States</span>
+              <img class="dropdown-item-icon mr-2" src="{% static 'assets/vendor/flag-icon-css/flags/4x3/kr.svg' %}" alt="SVG">
+              <span class="d-inline-block d-sm-none">KR</span>
+              <span class="d-none d-sm-inline-block">Korea</span>
             </a>
 
             <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
@@ -185,16 +136,16 @@
               </a>
 
               <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                <a class="dropdown-item" href="../main/help-desk/faq.html">Help</a>
-                <a class="dropdown-item" href="../main/help-desk/help.html">Contacts</a>
+                <a class="dropdown-item" href="../main/help/confirmname.html">파보 등재확인</a>
+                <a class="dropdown-item" href="{% url 'help' %}">도움받기</a>
               </div>
             </div>
             <!-- End Jump To -->
 
             <!-- Links -->
             <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-              <a class="nav-link" href="../main/help-desk/faq.html">Help</a>
-              <a class="nav-link" href="../main/help-desk/help.html">Contacts</a>
+              <a class="nav-link" href="{% url 'confirm-name' %}">파보 등재확인</a>
+              <a class="nav-link" href="{% url 'help' %}">도움받기</a>
             </div>
             <!-- End Links -->
           </div>
@@ -203,7 +154,7 @@
             <!-- Search -->
             <li class="list-inline-item">
               <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:alert('It is a test');"
                    data-hs-unfold-options='{
                     "target": "#searchPushTop",
                     "type": "jquery-slide",
@@ -267,7 +218,7 @@
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
-          <a class="navbar-brand" href="../main/main.html" aria-label="Front">
+          <a class="navbar-brand" href="../main/index.html" aria-label="Front">
             <img src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
           </a>
           <!-- End Logo -->
@@ -299,30 +250,31 @@
               <!-- Pages Submenu -->
               <!-- End Pages -->
 
-              <!-- Blog One -->
+              <!-- Main Menu One -->
               <li class="hs-has-sub-menu navbar-nav-item">
                 <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">합천공파 종회</a>
 
-                <!-- Blog - Submenu-->
+                <!-- Blog One - Submenu-->
                 <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-                  <a class="dropdown-item" href="../main/hcgp/greeting.html">회장 인사말</a>
-                  <a class="dropdown-item" href="../main/hcgp/orgchart.html">종회 조직도</a>
-                  <a class="dropdown-item" href="../main/hcgp/execlist.html">종회 임원명단</a>
+                  <a class="dropdown-item" href="../hcgp/greeting.html">회장 인사말</a>
+                  <a class="dropdown-item" href="../hcgp/orgchart.html">종회 조직도</a>
+                  <a class="dropdown-item" href="../hcgp/execlist.html">종회 임원명단</a>
+                  <a class="dropdown-item" href="../hcgp/hmembers.html">종회 회원명</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../main/hcgp/map.html">찾아오시는 길</a>
+                  <a class="dropdown-item" href="../hcgp/map.html">찾아오시는 길</a>
                 </div>
                 <!-- End Submenu -->
               </li>
-              <!-- End Blog One -->
+              <!-- End Main Menu One -->
 
-              <!-- Blog Two -->
+              <!-- Main Menu Two -->
               <li class="hs-has-sub-menu navbar-nav-item">
                 <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">자료실</a>
 
-                <!-- Blog - Submenu-->
+                <!-- Main Menu Two - Submenu-->
                 <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
                   <a class="dropdown-item" href="../main/library/history.html">합천공파종회 약사</a>
-                  <a class="dropdown-item" href="../main/library/clans.html">합천공파종회 하계 소파</a>
+                  <a class="dropdown-item" href="../main/library/clans.html">합천공파 하계 소파</a>
                   <a class="dropdown-item" href="../main/library/honact.html">명조와 파조</a>
                   <a class="dropdown-item" href="../main/library/histsites.html">합천공파 유적지</a>
                   <div class="dropdown-divider"></div>
@@ -330,14 +282,31 @@
                 </div>
                 <!-- End Submenu -->
               </li>
-              <!-- End Blog Two -->
+              <!-- End Main Menu Two -->
+
+              <!-- Main Menu Three -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">합천공파종회 사랑방</a>
+
+                <!-- Main Menu Three - Submenu-->
+                <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item" href="../main/empty.html">공지사항</a>
+                  <a class="dropdown-item" href="../main/empty.html">합천공파 사진첩</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../main/empty.html">명예의 전당</a>
+                  <a class="dropdown-item" href="../main/empty.html">기부자 명단</a>
+                  <a class="dropdown-item" href="../main/empty.html">연회비 납부자 명단</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Main Menu Three -->
 
               <!-- Shop -->
               <!-- End Shop -->
               <!-- Demos -->
               <!-- End Demos -->
 
-              <!-- Home -->
+              <!-- Main Menu Genealogy -->
               <li class="hs-has-mega-menu navbar-nav-item">
                 <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">합천공파 파보</a>
 
@@ -349,10 +318,10 @@
                       <div class="navbar-banner" style="background-image: url(../../assets/img/750x750/img1.jpg);">
                         <div class="navbar-banner-content">
                           <div class="mb-4">
-                            <span class="h2 d-block text-white">Branding Works</span>
-                            <p class="text-white">Experience a level of our quality in both design &amp; customization works.</p>
+                            <span class="h2 d-block text-white">내 이름은 족보에 등재되어 있나요?</span>
+                            <p class="text-white">나 또는 내 가족이 양천허씨 합천공파 파보에 등재되어 있는지 '찾아보기' 버튼을 눌러 확인해 보십시오.</p>
                           </div>
-                          <a class="btn btn-primary btn-sm transition-3d-hover" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                          <a class="btn btn-primary btn-sm transition-3d-hover" href="#">찾아보기 <i class="fas fa-angle-right fa-sm ml-1"></i></a>
                         </div>
                       </div>
                       <!-- End Banner Image -->
@@ -361,13 +330,13 @@
                     <div class="col-lg-6">
                       <div class="row mega-menu-body">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                          <span class="d-block h5">Classic</span>
-                          <a class="dropdown-item" href="empty.html">Agency</a>
-                          <a class="dropdown-item" href="empty.html">Analytics <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
-                          <a class="dropdown-item" href="empty.html">Studio</a>
-                          <a class="dropdown-item" href="empty.html">Marketing</a>
-                          <a class="dropdown-item" href="empty.html" target="_blank">Advertisement <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
-                          <a class="dropdown-item" href="empty.html">Consulting</a>
+                          <span class="d-block h5">가계도</span>
+                          <a class="dropdown-item" href="empty.html">나의 가계도</a>
+                          <a class="dropdown-item" href="empty.html">나의 가족 이야기<span class="badge badge-warning badge-pill ml-2">Hot</span></a>
+                          <a class="dropdown-item" href="empty.html">나의 외가<span class="badge badge-primary badge-pill ml-2">New</span></a>
+                          <a class="dropdown-item" href="empty.html">나의 친족</a>
+                          <a class="dropdown-item" href="empty.html" target="_blank">우리 가족 사진첩<span class="badge badge-warning badge-pill ml-2">Hot</span></a>
+                          <a class="dropdown-item" href="empty.html">우리 가족 동영상<span class="badge badge-primary badge-pill ml-2">New</span></a>
                           <a class="dropdown-item" href="main.html">Portfolio</a>
                           <a class="dropdown-item" href="empty.html">Software</a>
                           <a class="dropdown-item" href="empty.html">Business</a>
@@ -376,15 +345,15 @@
                         <div class="col-sm-6">
                           <span class="d-block h5">App</span>
                           <div class="mb-3">
-                            <a class="dropdown-item" href="empty.html">UI Kit</a>
-                            <a class="dropdown-item" href="empty.html">SaaS</a>
-                            <a class="dropdown-item" href="empty.html">Workflow</a>
-                            <a class="dropdown-item" href="empty.html">Payment</a>
-                            <a class="dropdown-item" href="empty.html">Tool</a>
+                            <a class="dropdown-item" href="empty.html">직업 분포도</a>
+                            <a class="dropdown-item" href="empty.html">성별/나이별 구성비율</a>
+                            <a class="dropdown-item" href="empty.html">세수별 구성비율</a>
+                            <a class="dropdown-item" href="empty.html">거주지별 분포도</a>
+                            <a class="dropdown-item" href="empty.html">성씨별 구성비율</a>
                           </div>
 
-                          <span class="d-block h5">Onepages</span>
-                          <a class="dropdown-item" href="empty.html">Corporate</a>
+                          <span class="d-block h5">e-족보 보기</span>
+                          <a class="dropdown-item" href="empty.html">e-합천공파파보 보기</a>
                           <a class="dropdown-item" href="empty.html">SaaS <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
                         </div>
                       </div>
@@ -443,7 +412,7 @@
                         <div class="navbar-promo-footer-item">
                           <span class="navbar-promo-footer-text">질문이 있으십니까?</span>
                           <a class="navbar-promo-footer-text" href="http://hcgp91.org/contact-us">  <!-- 합천공파종회 홈페이지 -->
-                            합천공파종회 파보위원회
+                            파보위원회
                           </a>
                         </div>
                       </div>
@@ -470,275 +439,21 @@
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== SIDE MENU ========== -->
+
   <main id="content" role="main">
-    <!-- Title Section -->
-    <div class="bg-light">
-      <div class="container py-5">
-        <div class="row align-items-sm-center">
-          <div class="col-sm-6 mb-3 mb-sm-0">
-            <h1 class="h4 mb-0">현재페이지 제</h1>
-          </div>
-
-          <div class="col-sm-6">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb breadcrumb-no-gutter justify-content-sm-end mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Categories</li>
-              </ol>
-            </nav>
-            <!-- End Breadcrumb -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Title Section -->
-
-    <!-- Categories Section -->
-    <div class="container space-top-1 space-top-md-2 space-bottom-2">
-      <div class="row">
-        <div class="col-lg-3 mb-5 mb-lg-0">
-          <!-- Navbar -->
-          <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
-            <!-- Responsive Toggle Button -->
-            <button type="button" class="navbar-toggler btn btn-block border py-3"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false"
-                    aria-controls="sidebarNav"
-                    data-toggle="collapse"
-                    data-target="#sidebarNav">
-              <span class="d-flex justify-content-between align-items-center">
-                <span class="h5 mb-0">View all categories</span>
-                <span class="navbar-toggler-default">
-                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
-                  </svg>
-                </span>
-                <span class="navbar-toggler-toggled">
-                  <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-                  </svg>
-                </span>
-              </span>
-            </button>
-            <!-- End Responsive Toggle Button -->
-
-            <div id="sidebarNav" class="collapse navbar-collapse">
-              <!-- Nav Link -->
-              <div class="pl-2 pl-lg-0 mt-3 mt-lg-0">
-                <div class="position-relative">
-                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav1Collapse" data-target="#sidebarNav1Collapse">
-                    합천공파 종회
-                  </a>
-
-                  <div id="sidebarNav1Collapse" class="collapse" data-parent="#sidebarNav">
-                    <div id="sidebarNav1" class="navbar-nav align-items-start flex-column">
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav1One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav1One">
-                          Electronic accessories
-                        </a>
-                        <div id="sidebarNav1One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav1">
-                          <a class="dropdown-item" href="#">Mobile accessories</a>
-                          <a class="dropdown-item" href="#">Portable audio</a>
-                          <a class="dropdown-item" href="#">Wearable</a>
-                          <a class="dropdown-item" href="#">Console accessories</a>
-                          <a class="dropdown-item" href="#">Camera accessories</a>
-                          <a class="dropdown-item" href="#">Computer accessories</a>
-                          <a class="dropdown-item" href="#">Storage</a>
-                          <a class="dropdown-item" href="#">Printers</a>
-                          <a class="dropdown-item" href="#">Computer components</a>
-                        </div>
-                      </div>
-                      <a class="dropdown-item" href="#">Mobiles</a>
-                      <a class="dropdown-item" href="#">Tablets</a>
-                      <a class="dropdown-item" href="#">Laptops</a>
-                      <a class="dropdown-item" href="#">Desktops</a>
-                      <a class="dropdown-item" href="#">Gaming consoles</a>
-                      <a class="dropdown-item" href="#">Car cameras</a>
-                      <a class="dropdown-item" href="#">Security cameras</a>
-                      <a class="dropdown-item" href="#">Digital cameras</a>
-                      <a class="dropdown-item" href="#">Gadgets</a>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="dropdown-item px-0" href="#">
-                  자료실 1
-                </a>
-
-                <div class="position-relative">
-                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2Collapse" data-target="#sidebarNav2Collapse">
-                    자료실 2
-                  </a>
-
-                  <div id="sidebarNav2Collapse" class="collapse" data-parent="#sidebarNav">
-                    <div id="sidebarNav2" class="navbar-nav align-items-start flex-column">
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav2One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2One">
-                          TV &amp; video devices
-                        </a>
-                        <div id="sidebarNav2One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav2">
-                          <a class="dropdown-item" href="#">Accessories</a>
-                        </div>
-                      </div>
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav2Two" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav2Two">
-                          Large appliances
-                        </a>
-                        <div id="sidebarNav2Two" class="navbar-nav flex-column collapse" data-parent="#sidebarNav2">
-                          <a class="dropdown-item" href="#">Kitchen</a>
-                          <a class="dropdown-item" href="#">Living room</a>
-                        </div>
-                      </div>
-                      <a class="dropdown-item" href="#">Cooling &amp; air treatment</a>
-                      <a class="dropdown-item" href="#">Vacuums &amp; floor care</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="position-relative">
-                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3Collapse" data-target="#sidebarNav3Collapse">
-                    Health &amp; beauty
-                  </a>
-
-                  <div id="sidebarNav3Collapse" class="collapse" data-parent="#sidebarNav">
-                    <div id="sidebarNav3" class="navbar-nav align-items-start flex-column">
-                      <a class="dropdown-item" href="#">Food supplements</a>
-                      <a class="dropdown-item" href="#">Skincare</a>
-                      <a class="dropdown-item" href="#">Makeup</a>
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav3One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3One">
-                          Beauty tools
-                        </a>
-                        <div id="sidebarNav3One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav3">
-                          <a class="dropdown-item" href="#">Men</a>
-                          <a class="dropdown-item" href="#">Women</a>
-                        </div>
-                      </div>
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav3Two" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav3Two">
-                          Medical supplies
-                        </a>
-                        <div id="sidebarNav3Two" class="navbar-nav flex-column collapse" data-parent="#sidebarNav3">
-                          <a class="dropdown-item" href="#">Bath &amp; body</a>
-                          <a class="dropdown-item" href="#">Hair care</a>
-                          <a class="dropdown-item" href="#">Personal care</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="dropdown-item px-0" href="#">
-                  Accessories
-                </a>
-
-                <a class="dropdown-item px-0" href="#">
-                  Furniture
-                </a>
-
-                <a class="dropdown-item px-0" href="#">
-                  Casual
-                </a>
-
-                <div class="position-relative">
-                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav4Collapse" data-target="#sidebarNav4Collapse">
-                    Babies &amp; toys
-                  </a>
-
-                  <div id="sidebarNav4Collapse" class="collapse" data-parent="#sidebarNav">
-                    <div id="sidebarNav4" class="navbar-nav align-items-start flex-column">
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav4One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav4One">
-                          Foods
-                        </a>
-                        <div id="sidebarNav4One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav4">
-                          <a class="dropdown-item" href="#">Feeding</a>
-                          <a class="dropdown-item" href="#">Milk formula</a>
-                        </div>
-                      </div>
-                      <a class="dropdown-item" href="#">Diapering &amp; potty</a>
-                      <a class="dropdown-item" href="#">Nursery</a>
-                      <a class="dropdown-item" href="#">Baby personal care</a>
-                      <a class="dropdown-item" href="#">Clothing &amp; accessories</a>
-                      <a class="dropdown-item" href="#">Baby and &amp; toys</a>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="dropdown-item px-0" href="#">
-                  Sports &amp; travel
-                </a>
-
-                <a class="dropdown-item px-0" href="#">
-                  Fashion
-                </a>
-
-                <a class="dropdown-item px-0" href="#">
-                  Glasses
-                </a>
-
-                <div class="position-relative">
-                  <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav5Collapse" data-target="#sidebarNav5Collapse">
-                    Automotive &amp; motorcycles
-                  </a>
-
-                  <div id="sidebarNav5Collapse" class="collapse" data-parent="#sidebarNav">
-                    <div id="sidebarNav5" class="navbar-nav align-items-start flex-column">
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav5One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav5One">
-                          Automotive
-                        </a>
-                        <div id="sidebarNav5One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav5">
-                          <a class="dropdown-item" href="#">Services &amp; installations</a>
-                          <a class="dropdown-item" href="#">Auto oils &amp; fluids</a>
-                        </div>
-                      </div>
-                      <a class="dropdown-item" href="#">Interior accessories</a>
-                      <a class="dropdown-item" href="#">Exterior accessories</a>
-                      <a class="dropdown-item" href="#">Car audio</a>
-                      <a class="dropdown-item" href="#">Auto care</a>
-                      <a class="dropdown-item" href="#">Riding gear</a>
-                      <div class="position-relative">
-                        <a class="dropdown-item dropdown-toggle dropdown-toggle-collapse" href="javascript:;" data-target="#sidebarNav6One" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarNav6One">
-                          Automotive
-                        </a>
-                        <div id="sidebarNav6One" class="navbar-nav flex-column collapse" data-parent="#sidebarNav5">
-                          <a class="dropdown-item" href="#">Services &amp; installations</a>
-                          <a class="dropdown-item" href="#">Auto oils &amp; fluids</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Nav Link -->
-              </div>
-            </div>
-          </div>
-          <!-- End Navbar -->
-        </div>
-        <!-- ======== END SIDE MENU ======= -->
-
-        <!-- MAIN CONTENTS -->
-        <div class="col-lg-9">
-          <!-- CTA -->
-          <div class="bg-img-hero rounded p-6 mb-5" style="background-image: url(../../assets/img/1920x800/img7.jpg);">
-            <div class="row align-items-md-center">
-              <div class="col-md-8 mb-3 mb-md-0">
-                <h1 class="h4 mb-0">Save up to 30% with orders above $50</h1>
-              </div>
-              <div class="col-md-4 text-md-right">
-                <a class="btn btn-primary btn-pill transition-3d-hover px-5" href="#">Shop Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- End CTA -->
-
-{% block content %}
+  {% block breadcrumb %}
 
 
 
-{% endblock content %}
+  {% endblock breadcrumb %}
+
+
+  <!-- Main Section -->
+  {% block content %}
+
+
+
+  {% endblock content %}
           <!--
           <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-5">
@@ -845,7 +560,7 @@
           <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
             <!-- Logo -->
             <div class="mb-4">
-              <a href="../main/main.html" aria-label="Front">
+              <a href="{% url 'main' %}" aria-label="HCGP">
                 <img class="brand" src="{% static 'assets/svg/logos/logo-white.svg' %}" alt="Logo">
               </a>
             </div>
@@ -858,7 +573,7 @@
                   <span class="media">
                     <span class="fas fa-location-arrow mt-1 mr-2"></span>
                     <span class="media-body">
-                      153 Williamson Plaza, Maggieberg
+                      86 Sangbong-ro, Jungnang-gu, Seoul, 02174 Korea
                     </span>
                   </span>
                 </a>
@@ -868,7 +583,7 @@
                   <span class="media">
                     <span class="fas fa-phone-alt mt-1 mr-2"></span>
                     <span class="media-body">
-                      +1 (062) 109-9222
+                      +82 (02) 491-9798
                     </span>
                   </span>
                 </a>
@@ -878,7 +593,7 @@
           </div>
 
           <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-            <h5 class="text-white">Company</h5>
+            <h5 class="text-white">합천공파종회</h5>
 
             <!-- Nav Link -->
             <ul class="nav nav-sm nav-x-0 nav-white flex-column">
@@ -1026,8 +741,8 @@
 
         <!-- Copyright -->
         <div class="w-md-75 text-lg-center mx-lg-auto">
-          <p class="text-white opacity-sm small">&copy; Front. 2020 Htmlstream. All rights reserved.</p>
-          <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools, we or our authorised service providers may use cookies for storing information to help provide you with a better, faster and safer experience and for marketing purposes.</p>
+          <p class="text-white opacity-sm small">&copy; 양천허씨 합천공파종회. 2020, 2021. All rights reserved.</p>
+          <p class="text-white opacity-sm small">이 사이트의 컨텐츠는 저작권 법의 보호를 받으므로 무단 전재, 복사, 배포 등을 금합니다.</p>
         </div>
         <!-- End Copyright -->
       </div>
@@ -1069,14 +784,14 @@
                 <div id="login">
                   <!-- Title -->
                   <div class="text-center mb-7">
-                    <h3 class="mb-0">Sign In to Front</h3>
-                    <p>Login to manage your account.</p>
+                    <h3 class="mb-0">합천공파 파보 Sign In</h3>
+                    <p>Sign In 한 후 열람할 수 있습니다.</p>
                   </div>
                   <!-- End Title -->
 
                   <!-- Input Group -->
                   <div class="js-form-message mb-4">
-                    <label class="input-label">Email</label>
+                    <label class="input-label">Sign In ID</label>
                     <div class="input-group input-group-sm mb-2">
                       <input type="email" class="form-control" name="email" id="signinEmail" placeholder="Email" aria-label="Email" required
                              data-msg="Please enter a valid email address.">
@@ -1086,9 +801,9 @@
 
                   <!-- Input Group -->
                   <div class="js-form-message mb-3">
-                    <label class="input-label">Password</label>
+                    <label class="input-label">비밀번호</label>
                     <div class="input-group input-group-sm mb-2">
-                      <input type="password" class="form-control" name="password" id="signinPassword" placeholder="Password" aria-label="Password" required
+                      <input type="password" class="form-control" name="password" id="signinPassword" placeholder="Password" aria-label="비밀번호" required
                              data-msg="Your password is invalid. Please try again.">
                     </div>
                   </div>
@@ -1102,7 +817,7 @@
                          "animationType": "css-animation",
                          "animationIn": "slideInUp",
                          "duration": 400
-                       }'>Forgot Password?</a>
+                       }'>비밀번호를 잊어버리셨습니까?</a>
                   </div>
 
                   <div class="mb-3">
@@ -1121,7 +836,7 @@
                   </a>
 
                   <div class="text-center">
-                    <span class="small text-muted">Do not have an account?</span>
+                    <span class="small text-muted">족보 등재를 원하십니까?</span>
                     <a class="js-animation-link small font-weight-bold" href="javascript:;"
                        data-hs-show-animation-options='{
                          "targetSelector": "#signup",
@@ -1129,7 +844,7 @@
                          "animationType": "css-animation",
                          "animationIn": "slideInUp",
                          "duration": 400
-                       }'>Sign Up
+                       }'>등재 신청하러 가기
                     </a>
                   </div>
                 </div>
@@ -1293,7 +1008,7 @@
   <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
   <script src="{% static 'assets/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
   <script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-
+    
   <!-- JS Implementing Plugins -->
   <script src="{% static 'assets/vendor/hs-header/dist/hs-header.min.js' %}"></script>
   <script src="{% static 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' %}"></script>

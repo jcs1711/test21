@@ -3,74 +3,84 @@
 {% extends 'menus/topmn.html' %}
 {% load static %}
 
-<body>
+<head>
+  {% block title %}Help{% endblock title %}
+</head>
 
+<body>
 {% block content %}
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main">
-    <!-- Hero Section -->
-    <div class="position-relative">
-      <div class="bg-img-hero" style="background-image: url(../../assets/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
-          <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
-            <h1>질문이 있으신가요?</h1>
-            <p>양천허씨 합천공파 파보 등재와 관련하여 궁금한 내용에 대해 도움을 받으십시요. </p>
+    <!-- Title Section -->
+    <div class="bg-light">
+      <div class="container py-5">
+        <div class="row align-items-sm-center">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <h1 class="h4 mb-0">도움받기</h1>
           </div>
 
-          <div class="row">
-            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
-              <!-- Card -->
-              <a class="card text-center h-100 transition-3d-hover" href="#">
-                <div class="card-body p-lg-5">
-                  <figure class="max-w-8rem w-100 mx-auto mb-4">
-                    <img class="img-fluid" src="../../assets/svg/icons/icon-7.svg" alt="SVG">
-                  </figure>
-                  <h3 class="h4">Knowledgebase</h3>
-                  <p class="text-body mb-0">We're here to help with any questions or code.</p>
-                </div>
-                <div class="card-footer font-weight-bold py-3 px-lg-5">
-                  Contact support <i class="fas fa-angle-right fa-sm ml-1"></i>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-
-            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
-              <!-- Card -->
-              <a class="card text-center h-100 transition-3d-hover" href="#">  <!-- link to FAQ html -->
-                <div class="card-body p-lg-5">
-                  <figure class="max-w-8rem w-100 mx-auto mb-4">
-                    <img class="img-fluid" src="{% static 'assets/svg/icons/icon-4.svg' %}" alt="SVG">
-                  </figure>
-                  <h3 class="h4">FAQ</h3>
-                  <p class="text-body mb-0">아래의 '질문서'를 작성하시기 전에 자주하는 질문에 대한 답변을 먼저 살펴보세요.</p>
-                </div>
-                <div class="card-footer font-weight-bold py-3 px-lg-5">
-                  자주하는 질문 <i class="fas fa-angle-right fa-sm ml-1"></i>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-
-            <div class="col-md-4 mb-md-n11">
-              <!-- Card -->
-              <a class="card text-center h-100 transition-3d-hover" href="#">
-                <div class="card-body p-lg-5">
-                  <figure class="max-w-8rem w-100 mx-auto mb-4">
-                    <img class="img-fluid" src="../../assets/svg/icons/icon-44.svg" alt="SVG">
-                  </figure>
-                  <h3 class="h4">Developer APIs</h3>
-                  <p class="text-body mb-0">Check out our development quickstart guide.</p>
-                </div>
-                <div class="card-footer font-weight-bold py-3 px-lg-5">
-                  Contact sales <i class="fas fa-angle-right fa-sm ml-1"></i>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
+          <div class="col-sm-6">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter justify-content-sm-end mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'main' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Help</li>
+              </ol>
+            </nav>
+            <!-- End Breadcrumb -->
           </div>
         </div>
       </div>
+    </div>
+    <!-- End Title Section -->
+
+    <!-- Main Section -->
+    <main id="content" role="main">
+      <!-- Hero Section -->
+      <div class="position-relative">
+        <div class="bg-img-hero" style="background-image: url(../../assets/svg/components/abstract-shapes-12.svg);">
+          <div class="container space-top-3 space-top-lg-2 space-bottom-2 position-relative z-index-2">   <!-- from space-top-lg-4  to space-top-lg-2 -->
+            <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
+              <h1>질문이 있으신가요?</h1>
+              <p>양천허씨 합천공파 파보 등재와 관련하여 궁금한 내용에 대해 도움을 받으십시요. </p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-2 mb-md-0 mb-md-n11">
+                <!-- Card -->
+                <a class="card text-center h-100 transition-3d-hover" href="#">
+                  <div class="card-body p-lg-5">
+                    <figure class="max-w-8rem w-100 mx-auto mb-4">
+                      <img class="img-fluid" src="{% static 'assets/svg/icons/icon-7.svg' %}" alt="SVG">
+                    </figure>
+                    <h3 class="h4">수단이란 무엇인가?</h3>
+                    <p class="text-body mb-0">족보 등재를 위해 요구되는 수단 양식에 대해 알아보세요.</p>
+                  </div>
+                  <div class="card-footer font-weight-bold py-3 px-lg-5">
+                    수단양식 방문하기 <i class="fas fa-angle-right fa-sm ml-1"></i>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-md-6 mb-2 mb-md-0 mb-md-n11">
+                <!-- Card -->
+                <a class="card text-center h-100 transition-3d-hover" href="#">  <!-- link to FAQ html -->
+                  <div class="card-body p-lg-5">
+                    <figure class="max-w-8rem w-100 mx-auto mb-4">
+                      <img class="img-fluid" src="{% static 'assets/svg/icons/icon-4.svg' %}" alt="SVG">
+                    </figure>
+                    <h3 class="h4">FAQ</h3>
+                    <p class="text-body mb-0">질문 전에 자주하는 질문에 대한 답변을 먼저 살펴보세요.</p>
+                  </div>
+                  <div class="card-footer font-weight-bold py-3 px-lg-5">
+                    자주하는 질문 <i class="fas fa-angle-right fa-sm ml-1"></i>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+          </div>
+        </div>
 
       <!-- SVG Shape -->
       <figure class="position-absolute bottom-0 right-0 left-0">
@@ -157,30 +167,6 @@
       </div>
     </div>
     <!-- End Contact Form Section -->
-
-    <!-- Leaflet -->
-    <div class="container-fluid mb-3">
-      <div id="map" class="min-h-450rem rounded"
-           data-hs-leaflet-options='{
-             "map": {
-               "scrollWheelZoom": false,
-               "coords": [37.4040344, -122.0289704]
-             },
-             "marker": [
-               {
-                 "coords": [37.4040344, -122.0289704],
-                 "icon": {
-                   "iconUrl": "../../assets/svg/components/map-pin.svg",
-                   "iconSize": [50, 45]
-                 },
-                 "popup": {
-                   "text": "Test text!"
-                 }
-               }
-             ]
-            }'></div>
-    </div>
-    <!-- End Leaflet -->
   </main>
   <!-- ========== END MAIN ========== -->
 {% endblock content %}

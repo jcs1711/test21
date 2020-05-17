@@ -36,7 +36,7 @@ $(document).ready(function() {
   
       ctrl.example.files = [
         {
-          name: 'main.html',
+          name: 'index.html',
           url: 'https://raw.githubusercontent.com/snapappointments/bootstrap-select/v1.13.0-dev/tests/bootstrap' + bootstrapVersion + '.html',
           content: ''
         },
@@ -60,7 +60,7 @@ $(document).ready(function() {
         .then(function(data) {
           file.content = data;
 
-          if (file.name === 'main.html') {
+          if (file.name === 'index.html') {
             file.content = file.content.replace(new RegExp('../dist/', 'g'), '');
           }
 

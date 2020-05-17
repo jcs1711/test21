@@ -14,6 +14,14 @@ class GeneMember(models.Model):
     bdate = models.DateField(blank=True, null=True)
     date_created =models.DateTimeField(default=timezone.now)
 
+class MyFamilyStory(models.Model):
+    author = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    content1 = models.TextField()
+    content2 = models.TextField()
+    date_created = models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True)
+    timestamp = models.DateTimeField(auto_now=True)
+
 
 
 

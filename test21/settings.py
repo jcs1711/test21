@@ -45,10 +45,11 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'main',
+    'login',
     'hcgp',
-    'genebook',
+    'genealogy',
     'blog',
-    'helpdesk',
+    'help',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -139,5 +140,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),   # a directory where all static files are stored
 )

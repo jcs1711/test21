@@ -3,7 +3,7 @@
 {% load static %}
 <head>
   <!-- Title -->
-  <title>{% block title %}HapCheonGongPa{% endblock title %}</title>
+  <title>{% block title %}{% endblock title %}</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -56,7 +56,7 @@
 
           <!-- Input -->
           <form class="input-group">
-            <input type="search" class="form-control" placeholder="내 이름으로 찾아보기      '예: 허길동'" aria-label="Search Front">
+            <input type="search" class="form-control" placeholder="내 이름으로 찾아보기   '예: 허길동'" aria-label="Search Front">
             <div class="input-group-append">
               <button type="button" class="btn btn-primary">찾아보기</button>
             </div>
@@ -65,8 +65,8 @@
 
           <!-- Content -->
           <div class="row d-none d-md-flex mt-7">
-            <div class="col-sm-6">
-              <span class="h5">Quick Links</span>
+            <div class="col-sm-12">
+              <span class="h5">양천허씨 합천공파 파보 등재여부</span>
 
               <div class="row">
                 <!-- Nav Link -->
@@ -74,23 +74,7 @@
                   <div class="nav nav-sm nav-x-0 flex-column">
                     <a class="nav-link" href="#">
                       <i class="fas fa-angle-right mr-1"></i>
-                      Search Results List
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results Grid
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      About
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Services
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Invoice
+                      등재 리스트
                     </a>
                   </div>
                 </div>
@@ -103,43 +87,10 @@
                       <i class="fas fa-angle-right mr-1"></i>
                       Profile
                     </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      User Contacts
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Reviews
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Settings
-                    </a>
                   </div>
                 </div>
                 <!-- End Nav Link -->
               </div>
-            </div>
-
-            <div class="col-sm-6">
-              <!-- Banner -->
-              <div class="rounded search-push-top-banner">
-                <div class="d-flex align-items-center">
-                  <div class="search-push-top-banner-container">
-                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img3.png' %}" alt="Image Description">
-                    <img class="img-fluid search-push-top-banner-img" src="{% static 'assets/img/mockups/img2.png' %}" alt="Image Description">
-                  </div>
-
-                  <div>
-                    <div class="mb-4">
-                      <span class="h5">Featured Item</span>
-                      <p>Create astonishing web sites and pages.</p>
-                    </div>
-                    <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:;">Apply Now <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Banner -->
             </div>
           </div>
           <!-- End Content -->
@@ -188,7 +139,7 @@
               </a>
 
               <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                <!-- <a class="dropdown-item" href="../main/help-desk/faq.html">Help</a> -->
+                <a class="dropdown-item" href="../main/help/confirmname.html">파보 등재확인</a>
                 <a class="dropdown-item" href="{% url 'help' %}">도움받기</a>
               </div>
             </div>
@@ -196,7 +147,7 @@
 
             <!-- Links -->
             <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-              <!-- <a class="nav-link" href="../main/help-desk/faq.html">Help</a> -->
+              <a class="nav-link" href="{% url 'confirm-name' %}">파보 등재확인</a>
               <a class="nav-link" href="{% url 'help' %}">도움받기</a>
             </div>
             <!-- End Links -->
@@ -206,7 +157,7 @@
             <!-- Search -->
             <li class="list-inline-item">
               <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:alert('It is a test');"
                    data-hs-unfold-options='{
                     "target": "#searchPushTop",
                     "type": "jquery-slide",
@@ -270,7 +221,7 @@
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
-          <a class="navbar-brand" href="../main/main.html" aria-label="Front">
+          <a class="navbar-brand" href="../main/index.html" aria-label="Front">
             <img src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
           </a>
           <!-- End Logo -->
@@ -302,30 +253,31 @@
               <!-- Pages Submenu -->
               <!-- End Pages -->
 
-              <!-- Blog One -->
+              <!-- Main Menu One -->
               <li class="hs-has-sub-menu navbar-nav-item">
                 <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">합천공파 종회</a>
 
-                <!-- Blog - Submenu-->
+                <!-- Main Menu One - Submenu-->
                 <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-                  <a class="dropdown-item" href="../main/hcgp/greeting.html">회장 인사말</a>
-                  <a class="dropdown-item" href="../main/hcgp/orgchart.html">종회 조직도</a>
-                  <a class="dropdown-item" href="../main/hcgp/execlist.html">종회 임원명단</a>
+                  <a class="dropdown-item" href="{% url 'greeting' %}">회장 인사말</a>
+                  <a class="dropdown-item" href="{% url 'organization' %}">종회 조직도</a>
+                  <a class="dropdown-item" href="{% url 'executives' %}">종회 임원명단</a>
+                  <a class="dropdown-item" href="{% url 'hmembers' %}">종회 회원명단</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../main/hcgp/map.html">찾아오시는 길</a>
+                  <a class="dropdown-item" href="{% url 'map' %}">찾아오시는 길</a>
                 </div>
                 <!-- End Submenu -->
               </li>
-              <!-- End Blog One -->
+              <!-- End Main Menu One -->
 
-              <!-- Blog Two -->
+              <!-- Main Menu Two -->
               <li class="hs-has-sub-menu navbar-nav-item">
                 <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">자료실</a>
 
-                <!-- Blog - Submenu-->
+                <!-- Main Menu Two - Submenu-->
                 <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
                   <a class="dropdown-item" href="../main/library/history.html">합천공파종회 약사</a>
-                  <a class="dropdown-item" href="../main/library/clans.html">합천공파종회 하계 소파</a>
+                  <a class="dropdown-item" href="../main/library/clans.html">합천공파 하계 소파</a>
                   <a class="dropdown-item" href="../main/library/honact.html">명조와 파조</a>
                   <a class="dropdown-item" href="../main/library/histsites.html">합천공파 유적지</a>
                   <div class="dropdown-divider"></div>
@@ -333,14 +285,31 @@
                 </div>
                 <!-- End Submenu -->
               </li>
-              <!-- End Blog Two -->
+              <!-- End Main Menu Two -->
+
+              <!-- Main Menu Three -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">합천공파종회 사랑방</a>
+
+                <!-- Main Menu Three - Submenu-->
+                <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item" href="../main/empty.html">공지사항</a>
+                  <a class="dropdown-item" href="../main/empty.html">합천공파 사진첩</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../main/empty.html">명예의 전당</a>
+                  <a class="dropdown-item" href="../main/empty.html">기부자 명단</a>
+                  <a class="dropdown-item" href="../main/empty.html">연회비 납부자 명단</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Main Menu Three -->
 
               <!-- Shop -->
               <!-- End Shop -->
               <!-- Demos -->
               <!-- End Demos -->
 
-              <!-- Home -->
+              <!-- Main Menu Genealogy -->
               <li class="hs-has-mega-menu navbar-nav-item">
                 <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">합천공파 파보</a>
 
@@ -377,13 +346,13 @@
                         </div>
 
                         <div class="col-sm-6">
-                          <span class="d-block h5">합천공파종원 통계</span>
+                          <span class="d-block h5">합천공파종원(등재) 통계</span>
                           <div class="mb-3">
-                            <a class="dropdown-item" href="empty.html">성별/나이별 비율</a>
+                            <a class="dropdown-item" href="empty.html">직업 분포도</a>
+                            <a class="dropdown-item" href="empty.html">성별/나이별 구성비율</a>
                             <a class="dropdown-item" href="empty.html">세수별 구성비율</a>
                             <a class="dropdown-item" href="empty.html">거주지별 분포도</a>
                             <a class="dropdown-item" href="empty.html">성씨별 구성비율</a>
-                            <a class="dropdown-item" href="empty.html">Tool</a>
                           </div>
 
                           <span class="d-block h5">e-족보 보기</span>
@@ -412,7 +381,7 @@
                 <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu" style="min-width: 330px;">
                   <!-- Promo Item One -->
                   <div class="navbar-promo-item">
-                    <a class="navbar-promo-link" href="../main/help-desk/sudan-info.html">
+                    <a class="navbar-promo-link" href="../main/help/sudan-info.html">
                       <div class="media align-items-center">
                         <img class="navbar-promo-icon" src="{% static 'assets/svg/icons/icon-2.svg' %}" alt="SVG">
                         <div class="media-body">
@@ -446,7 +415,7 @@
                         <div class="navbar-promo-footer-item">
                           <span class="navbar-promo-footer-text">질문이 있으십니까?</span>
                           <a class="navbar-promo-footer-text" href="http://hcgp91.org/contact-us">  <!-- 합천공파종회 홈페이지 -->
-                            합천공파종회 파보위원회
+                            파보위원회
                           </a>
                         </div>
                       </div>
@@ -499,7 +468,7 @@
                   <span class="media">
                     <span class="fas fa-location-arrow mt-1 mr-2"></span>
                     <span class="media-body">
-                      서울특별시 중랑구 상봉로 86 (원창빌딩 4층)
+                      86 Sangbong-ro, Jungnang-gu, Seoul, 02174 Korea
                     </span>
                   </span>
                 </a>
@@ -509,7 +478,7 @@
                   <span class="media">
                     <span class="fas fa-phone-alt mt-1 mr-2"></span>
                     <span class="media-body">
-                      +82(2)491-9798
+                      +82 (02)491-9798
                     </span>
                   </span>
                 </a>
@@ -617,12 +586,12 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-xs btn-icon btn-soft-light" href="#"">
+                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
                   <i class="fab fa-google"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-xs btn-icon btn-soft-light" href=""#"">
+                <a class="btn btn-xs btn-icon btn-soft-light" href=#">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
@@ -642,7 +611,7 @@
                       "type": "css-animation",
                       "animationIn": "slideInDown"
                      }'>
-                    <img class="dropdown-item-icon" src="../../assets/vendor/flag-icon-css/flags/4x3/kr.svg" alt="Korean Flag">
+                    <img class="dropdown-item-icon" src="{% static 'assets/vendor/flag-icon-css/flags/4x3/kr.svg' %}" alt="Korean Flag">
                     <span>United States</span>
                   </a>
 
@@ -712,11 +681,13 @@
                   <!-- Title -->
                   <div class="text-center mb-7">
                     <h3 class="mb-0">합천공파 파보 Sign In</h3>
-                    <p>파보는 Sign In 한 후 열람할 수 있습니다.</p>
+                    <p>Sign In 한 후 열람할 수 있습니다.</p>
                   </div>
                   <!-- End Title -->
 
                   <!-- Input Group -->
+                  <form action ="#" method="post">
+                  {% csrf_token %}
                   <div class="js-form-message mb-4">
                     <label class="input-label">Sign In ID</label>
                     <div class="input-group input-group-sm mb-2">
@@ -724,6 +695,7 @@
                              data-msg="Please enter a Sign In ID.">
                     </div>
                   </div>
+                  </form>
                   <!-- End Input Group -->
 
                   <!-- Input Group -->
@@ -930,7 +902,6 @@
     <i class="fas fa-angle-up"></i>
   </a>
   <!-- End Go to Top -->
-
 
   <!-- JS Global Compulsory -->
   <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
